@@ -1,0 +1,13 @@
+{% block content %}
+<h1>Pacientes</h1>
+<ul>
+    {% for paciente in paciente %}
+    <li>
+        <strong>Nombre:</strong> {{ paciente.name_pac }}<br>
+        <strong>Historial:</strong> {{ paciente.historial }}<br>
+        <strong>Teléfono:</strong> {{ paciente.telefono }}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_pac' %}">Registrar nuevo paciente</a>
+{% endblock %}
